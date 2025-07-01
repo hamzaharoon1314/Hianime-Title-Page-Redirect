@@ -23,7 +23,7 @@ Automatically open clean anime title pages from the `/watch/` links on HiAnime's
 
 1. Install [Tampermonkey](https://www.tampermonkey.net/) browser extension.
 2. Click this link to install the script:  
-   👉 **[Install HiAnime Title Redirect](https://github.com/your-username/hianime-title-page-redirect/raw/main/hianime-title-toggle.user.js)**
+   👉 **[Install HiAnime Title Redirect](https://github.com/hamzaharoon1314/hianime-title-page-redirect/raw/main/hianime-title-toggle.user.js)**
 
 3. Visit any HiAnime page that contains `/user/continue-watching` in the URL.
 4. Toggle "Title page: ON" to activate.
