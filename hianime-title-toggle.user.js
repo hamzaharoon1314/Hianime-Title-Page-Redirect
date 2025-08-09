@@ -1,8 +1,9 @@
 // ==UserScript==
 // @name         HiAnime Title Page Redirect + Persistent Toggle
-// @namespace    https://github.com/your-username/hianime-title-page-redirect
+// @namespace    https://github.com/hamzaharoon1314/hianime-title-page-redirect
 // @version      2.1
 // @description  Redirect /watch/ links to clean title pages on HiAnime — remembers toggle, supports Ctrl+click & middle-click
+// @match        *://*/user/continue-watching*
 // @match        *://*/user/continue-watching*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=hianime.to
 // @grant        none
