@@ -114,4 +114,6 @@
         },
         true
     );
+    // Change the logo link from "/" to "/home"
+    document.getElementById('logo')?.setAttribute('href', '/home');
 })();
