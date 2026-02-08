@@ -1,13 +1,25 @@
 // ==UserScript==
-// @name         HiAnime Title Page Redirect + Persistent Toggle
+// @name         HiAnime Title Redirect
 // @namespace    https://github.com/hamzaharoon1314/hianime-title-page-redirect
-// @version      2.1
-// @description  Redirect /watch/ links to clean title pages on HiAnime — remembers toggle, supports Ctrl+click & middle-click
+// @version      2.3
+// @description  Automatically redirect episode links to clean anime title pages on HiAnime and It supports Ctrl+click & middle-click
 // @match        *://*/user/continue-watching*
 // @match        *://*/user/continue-watching*
+// @match        https://hianime.*/user/continue-watching*
+// @match        https://hianime.tv/user/continue-watching*
+// @match        https://hianime.to/user/continue-watching*
+// @match        https://hianimez.to/user/continue-watching*
+// @match        https://hianimez.is/user/continue-watching*
+// @match        https://hianime.nz/user/continue-watching*
+// @match        https://hianime.bz/user/continue-watching*
+// @match        https://hianime.pe/user/continue-watching*
+// @match        https://hianime.cx/user/continue-watching*
+// @match        https://hianime.do/user/continue-watching*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=hianime.to
 // @grant        none
 // @license      MIT
+// @downloadURL https://update.greasyfork.org/scripts/565631/HiAnime%20Title%20Page%20Redirect%20%2B%20Persistent%20Toggle.user.js
+// @updateURL https://update.greasyfork.org/scripts/565631/HiAnime%20Title%20Page%20Redirect%20%2B%20Persistent%20Toggle.meta.js
 // ==/UserScript==
 
 (function () {
@@ -19,21 +31,29 @@
     const button = document.createElement('button');
     Object.assign(button.style, {
         position: 'fixed',
-        bottom: '20px',
-        right: '20px',
+
+        /* Move to LEFT BOTTOM */
+        bottom: '10px',
+        left: '10px',
+
         zIndex: 9999,
-        padding: '12px 20px',
+
+        /* Make it SMALLER */
+        padding: '6px 10px',
+        fontSize: '11px',
+
         background: isOn
-            ? 'linear-gradient(to right, #00c853, #64dd17)'
-            : 'linear-gradient(to right, #6a11cb, #2575fc)',
+        ? 'linear-gradient(to right, #00c853, #64dd17)'
+        : 'linear-gradient(to right, #6a11cb, #2575fc)',
+
         color: '#fff',
         border: 'none',
-        borderRadius: '30px',
-        boxShadow: '0 4px 15px rgba(0, 0, 0, 0.2)',
+        borderRadius: '12px',   // less rounded, more compact
+        boxShadow: '0 2px 8px rgba(0, 0, 0, 0.2)',
         cursor: 'pointer',
-        fontSize: '15px',
-        transition: 'all 0.3s ease'
+        transition: 'all 0.2s ease'
     });
+
 
     button.innerText = `Title page: ${isOn ? 'ON' : 'OFF'}`;
 
